@@ -4,7 +4,10 @@
   "description": "A website that will help you with 'Whats the Phrase' and 'Words With Friends'",
   "main": "server.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "node start.js",
+    "test" : "mocha",
+    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover"
+
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,8 @@
     "node": ">=0.8.x"
   },
   "devDependencies": {
-    "babel-core": "^6.7.7"
+    "babel-core": "^6.7.7",
+    "istanbul": "^0.4.5",
+    "tape": "^4.6.3"
   }
 }
