@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node start.js",
-    "test" : "mocha",
-    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover"
-
+    "test": "mocha",
+    "ci-test": "istanbul cover tape \"test/*-test.js\" > test.tap && istanbul report clover",
+    "ci-lint": "eslint -f checkstyle start.js > checkstyle-result.xml"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,9 @@
   },
   "devDependencies": {
     "babel-core": "^6.7.7",
+    "babel-eslint": "^7.1.1",
+    "eslint": "^3.15.0",
+    "eslint-plugin-react": "^6.9.0",
     "istanbul": "^0.4.5",
     "tape": "^4.6.3"
   }
